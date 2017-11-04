@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Som Dos Bichos</string>
+    <string name="admob_key">ca-app-pub-2597576948288169/4535392722</string>
 </resources>

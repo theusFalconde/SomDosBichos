@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#f5e9b9"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -9,75 +10,98 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.developmind.sombichos.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/logo" />
 
-    <ImageView
-        android:id="@+id/caoId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_below="@+id/imageView"
-        android:background="@drawable/cao" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
 
-    <ImageView
-        android:id="@+id/gatoId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_alignRight="@+id/imageView"
-        android:layout_alignTop="@+id/caoId"
-        android:background="@drawable/gato" />
+        android:gravity="center_horizontal|center_vertical">
 
-    <ImageView
-        android:id="@+id/leaoId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/caoId"
-        android:layout_alignStart="@+id/caoId"
-        android:layout_centerVertical="true"
-        android:background="@drawable/leao" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo" />
 
-    <ImageView
-        android:id="@+id/macacoId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/gatoId"
-        android:layout_alignRight="@+id/gatoId"
-        android:layout_centerVertical="true"
-        android:background="@drawable/macaco" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal">
 
-    <ImageView
-        android:id="@+id/ovelhaId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/leaoId"
-        android:layout_alignStart="@+id/leaoId"
-        android:layout_below="@+id/macacoId"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/ovelha" />
+            <ImageView
+                android:id="@+id/caoId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cao" />
 
-    <ImageView
-        android:id="@+id/vacaId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/ovelhaId"
-        android:layout_alignEnd="@+id/macacoId"
-        android:layout_alignRight="@+id/macacoId"
-        android:background="@drawable/vaca"
-        android:contentDescription="Vaca" />
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/direitos" />
+            <ImageView
+                android:id="@+id/gatoId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gato"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|bottom">
+
+            <ImageView
+                android:id="@+id/leaoId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/leao"
+                />
+
+            <ImageView
+                android:id="@+id/macacoId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/macaco" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal|bottom">
+
+            <ImageView
+                android:id="@+id/ovelhaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ovelha" />
+
+            <ImageView
+                android:id="@+id/vacaId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vaca"
+                android:contentDescription="Vaca"
+                />
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            android:layout_marginTop="16dp"
+            app:adUnitId="@string/admob_key">
+        </com.google.android.gms.ads.AdView>
+
+
+    </LinearLayout>
+
 </RelativeLayout>
