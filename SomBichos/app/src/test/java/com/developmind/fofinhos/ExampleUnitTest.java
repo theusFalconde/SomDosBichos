@@ -1,4 +1,4 @@
-package com.developmind.sombichos;
+package com.developmind.fofinhos;
 
 import org.junit.Test;
 
